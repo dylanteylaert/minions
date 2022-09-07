@@ -3,8 +3,9 @@ require 'controllers/controller.php';
 
 
 if (isset($_GET['action'])){
-//pour plustard
-
+    if ($_GET['action'] == 'anim'){
+        readDessins();
+    };
 }
 else{
     home();
