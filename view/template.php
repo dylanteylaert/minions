@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="public/styles/style.css">
 </head>
 <body>
     <header>
@@ -40,6 +40,13 @@
                 </form>
             </div>
         </nav>
+
+        <div class="jumbotron jumbotron-fluid bg-dark">
+            <div class="container">
+                <img src="public/imgs/dessins/card.jpg" alt="">
+                <h1 class="display-4 text-white text-center">LES MINIONS</h1>
+            </div>
+        </div>
     </header>
 
 <?php echo $content ?>
