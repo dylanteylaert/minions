@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 07 sep. 2022 à 12:25
+-- Généré le : mer. 07 sep. 2022 à 14:22
 -- Version du serveur : 5.7.36
--- Version de PHP : 7.3.33
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,15 @@ CREATE TABLE IF NOT EXISTS `dessins` (
   `description` varchar(500) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_dessins`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `dessins`
+--
+
+INSERT INTO `dessins` (`id_dessins`, `dessin`, `description`, `image`) VALUES
+(1, 'naruto', 'test avec naruto', 'public/imgs/dessins/Capture.PNG'),
+(2, 'pokemon', 'test avec pokemon', 'public/imgs/dessins/250px-Celebi-HGSS.png');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
