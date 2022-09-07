@@ -24,17 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `dessins`
+-- Structure de la table `auteurs`
 --
 
-DROP TABLE IF EXISTS `dessins`;
-CREATE TABLE IF NOT EXISTS `dessins` (
-  `id_dessins` int(11) NOT NULL AUTO_INCREMENT,
-  `dessin` varchar(64) NOT NULL,
-  `description` varchar(500) NOT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id_dessins`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+DROP TABLE IF EXISTS `auteurs`;
+CREATE TABLE IF NOT EXISTS `auteurs` (
+  `id_auteur` int(11) NOT NULL,
+  `nom` varchar(260) NOT NULL,
+  `style` varchar(250) NOT NULL,
+  `photo` varchar(250) NOT NULL,
+  PRIMARY KEY (`id_auteur`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
