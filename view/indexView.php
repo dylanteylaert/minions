@@ -1,3 +1,4 @@
+<?php $title = 'Acccueil' ?>
 <?php ob_start(); ?>
 
 <div class="card" style="width: 18rem;">
