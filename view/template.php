@@ -41,10 +41,10 @@
             </div>
         </nav>
 
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid bg-dark">
             <div class="container">
-                <img src="" alt="">
-                <h1 class="display-4">LES MINIONS</h1>
+                <img src="public/imgs/dessins/card.jpg" alt="">
+                <h1 class="display-4 text-white text-center">LES MINIONS</h1>
             </div>
         </div>
     </header>
