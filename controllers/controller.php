@@ -10,3 +10,9 @@ function readDessins(){
 function home(){
     require 'view/indexView.php';
 }
+
+
+// Create dessins
+function addanim(){
+    require 'view/addDessins.php';
+}
