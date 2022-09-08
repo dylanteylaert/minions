@@ -15,6 +15,12 @@ if (isset($_GET['action'])){
     if ($_GET['action'] == 'modifDessins') {
         updateDessins2();
     }
+    if ($_GET['action'] == 'auteur') {
+        getAuteur();
+    }
+    if($_GET['action'] == 'vueAuteur'){
+        readAuteur();
+    }
     
 }
 

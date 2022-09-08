@@ -23,3 +23,12 @@ function readDessins(){
 function updateDessins2(){
     require 'view/updateDessins.php';
 }
+
+// Read auteurs
+
+function getAuteur(){
+    require 'view/getAuteur.php';
+}
+function readAuteur(){
+    require 'view/readAuteur.php';
+}
