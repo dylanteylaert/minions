@@ -37,6 +37,8 @@ function lireDessins(){
     return $list;
 }
 
+
+
 //create dessins
 if (isset($_POST['submitDessins'])){
     $db = dbConnect();
@@ -97,3 +99,22 @@ if (isset($_POST['submitDessins'])){
     }
     }
 };
+
+
+// update dessins
+function updateDessins(){
+    $db = dbconnect();
+    $sql = ('UPDATE dessins SET `dessin`=:dessin , `description`=:description , `image`=:image WHERE id_dessins= :id'); 
+    $prepare = $db->prepare($sql);
+    $prepare->execute(
+        [
+            'dessin' => $_POST['dessinmodif'],
+            'description' => $_POST['descriptionmodif'],
+            'image' => 'public/imgs/dessins/' . $_FILES['imgmodif']['name'],
+            'id' => $_POST['id']
+        ]
+    );
+    $fileName = 'public/imgs/dessins/' . basename($_FILES['imgmodif']['name']);
+    move_uploaded_file($_FILES['imgmodif']['tmp_name'], $fileName);
+    
+}
