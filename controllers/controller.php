@@ -32,3 +32,8 @@ function getAuteur(){
 function readAuteur(){
     require 'view/readAuteur.php';
 }
+
+// create auteurs
+function addAuteur(){
+    require 'view/addAuteurs.php';
+}

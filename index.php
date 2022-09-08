@@ -21,6 +21,9 @@ if (isset($_GET['action'])){
     if($_GET['action'] == 'vueAuteur'){
         readAuteur();
     }
+    if ($_GET['action'] == 'addAuteurs') {
+        addAuteur();
+    }
     
 }
 
