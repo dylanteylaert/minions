@@ -13,7 +13,7 @@
                     <img src="<?php echo $read['image'] ;?>" class="card-img-top" alt="" height="200px">
                     <div class="card-body">
                         <h5 class="card-title">Titre : <?php echo $read['dessin']; ?></h5>
-                        <a href="index.php?action=readDessins=<?php echo $read['id'] ?>"><button type="button" name="fiche" class="btn btn-dark">Fiche</button></a>
+                        <a href="index.php?action=dessin&id=<?php echo $read['id_dessins'] ?>"><button type="button" name="fiche" class="btn btn-dark">Fiche</button></a>
                     </div>
                 </div>
             </div>
