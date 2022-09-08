@@ -16,13 +16,24 @@ function dbConnect(){
 }
 
 // read dessins
-function getDessins(){
+function afficheDessins(){
     
     $db = dbConnect();
     $sql = 'SELECT * FROM dessins';
     $prepare = $db->prepare($sql);
     $prepare->execute();
     $list = $prepare->fetchall();
+    return $list;
+}
+
+function lireDessins(){
+    $db = dbConnect();
+    $readId = $db->prepare('SELECT * FROM dessins WHERE id_dessins = :id');
+    $readId->execute(
+    [
+        'id' => $_GET['id']
+    ]);
+    $list = $readId->fetchall();
     return $list;
 }
 

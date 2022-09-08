@@ -1,25 +1,28 @@
-<?php $title = 'Anim' ?>
+<?php $title = 'Anim miam' ?>
 <?php ob_start(); ?>
 
-    <section class="container-fluid">
-        <div class="row col-12 justify-content-center">
-            <?php
-            $list = getDessins();
-            foreach ($list as $read){
-            ?>
-
-            <div class="card" style='width:18rem'>
-                <div class="card-body" style='width:15rem'>
-                    <img src="<?php echo $read['image'] ;?>" class="card-img-top" alt="" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title">Titre : <?php echo $read['dessin']; ?></h5>
-                        <a href="index.php?action=dessin&id=<?php echo $read['id_dessins'] ?>"><button type="button" name="fiche" class="btn btn-dark">Fiche</button></a>
-                    </div>
+<section class="container-fluid">
+    <div class="row col-12 justify-content-center">
+        <?php
+        $list = lireDessins();
+        foreach ($list as $read){
+        ?>
+        <div class="card">
+            <div class="card-body">
+                <img src="<?php echo $read['image'] ;?>" alt="">
+                
+                <div class="ml-3">
+                    <p class="card-title">Titre : <?php echo $read['dessin']; ?></p>
+                    <p class="card-text">Description : <?php echo $read['description']; ?></p>
+                    <a href="index.php?action="><button class="btn btn-dark">Modifier</button></a>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">Supprimer</button>
                 </div>
             </div>
-            <?php } ; ?>
         </div>
-    </section>
-
+        <?php
+        }
+        ?>
+    </div>
+</section>
 <?php $content = ob_get_clean(); ?>
 <?php require 'view/template.php' ; ?>
