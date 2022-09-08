@@ -36,8 +36,26 @@ function lireDessins(){
     $list = $readId->fetchall();
     return $list;
 }
+// read auteur
 
-
+function viewAuteur(){
+    $db = dbConnect();
+    $sql = 'SELECT * FROM auteurs';
+    $prepare = $db->prepare($sql);
+    $prepare->execute();
+    $list = $prepare->fetchall();
+    return $list;
+}
+function lireAuteur(){
+    $db = dbConnect();
+    $readId = $db->prepare('SELECT * FROM auteurs WHERE id_auteur = :id');
+    $readId->execute(
+    [
+        'id' => $_GET['id']
+    ]);
+    $list = $readId->fetchall();
+    return $list;
+}
 
 //create dessins
 if (isset($_POST['submitDessins'])){
