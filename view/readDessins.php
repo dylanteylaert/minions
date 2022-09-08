@@ -14,7 +14,7 @@
                 <div class="ml-3">
                     <p class="card-title">Titre : <?php echo $read['dessin']; ?></p>
                     <p class="card-text">Description : <?php echo $read['description']; ?></p>
-                    <a href="index.php?action="><button class="btn btn-dark">Modifier</button></a>
+                    <a href="index.php?action=modifDessins&id=<?php echo $read['id_dessins'] ?>"><button class="btn btn-dark">Modifier</button></a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">Supprimer</button>
                 </div>
             </div>

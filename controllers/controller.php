@@ -19,3 +19,7 @@ function addanim(){
 function readDessins(){
     require 'view/readDessins.php';
 }
+
+function updateDessins2(){
+    require 'view/updateDessins.php';
+}
