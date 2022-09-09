@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 09 sep. 2022 à 09:27
+-- Généré le : ven. 09 sep. 2022 à 09:53
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `dessins` (
 --
 
 INSERT INTO `dessins` (`id_dessins`, `dessin`, `description`, `image`) VALUES
-(1, 'miana', 'dses', 'public/imgs/dessins/3.png'),
+(1, 'naruto', 'test avec naruto', 'public/imgs/dessins/Capture.PNG'),
 (2, 'pokemon', 'test avec pokemon', 'public/imgs/dessins/250px-Celebi-HGSS.png');
 COMMIT;
 
