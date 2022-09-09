@@ -34,7 +34,7 @@ if (isset($_GET['action'])){
 
 
 
-
+//update dessins
 if (isset($_POST['submitDessinsmodif'])){
 
     if ($_FILES['imgmodif'] && $_FILES['imgmodif']['error'] == 0 && $_FILES['imgmodif']['size'] <= 1000000){
@@ -53,6 +53,7 @@ if (isset($_POST['submitDessinsmodif'])){
     echo 'Image trop lourde et/ou non envoyée </br>';
     }
 }
+//update auteurs
 if (isset($_POST['submitAuteursmodif'])){
         if ($_FILES['imgAuteurmodif'] && $_FILES['imgAuteurmodif']['error'] == 0 && $_FILES['imgAuteurmodif']['size'] <= 1000000){
         $file = pathinfo($_FILES['imgAuteurmodif']['name']);
@@ -69,4 +70,14 @@ if (isset($_POST['submitAuteursmodif'])){
         }else{
         echo 'Image trop lourde et/ou non envoyée </br>';
         }
+}
+
+//delete auteur
+if(isset($_POST['supAuteur'])){
+    $db = dbConnect();
+    $sql =' DELETE FROM `auteurs` WHERE `id_auteur` = :id';
+    $prepare = $db->prepare($sql);
+    $prepare ->execute([
+        'id' => $_POST['id']
+    ]);
 }
