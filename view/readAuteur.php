@@ -14,7 +14,7 @@
                 <div class="ml-3">
                     <p class="card-title">Titre : <?php echo $read['nom']; ?></p>
                     <p class="card-text">Description : <?php echo $read['style']; ?></p>
-                    <a href="index.php?action=?=<?php echo $read['id_auteur'] ?>"><button class="btn btn-dark">Modifier</button></a>
+                    <a href="index.php?action=modifAuteurs&id=<?php echo $read['id_auteur'] ?>"><button class="btn btn-dark">Modifier</button></a>
                 </div>
             </div>
         </div>
