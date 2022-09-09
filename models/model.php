@@ -15,7 +15,7 @@ function dbConnect(){
     }
 }
 
-// read dessins
+// Get des dessins
 function afficheDessins(){
     
     $db = dbConnect();
@@ -26,6 +26,7 @@ function afficheDessins(){
     return $list;
 }
 
+// Read des dessins
 function lireDessins(){
     $db = dbConnect();
     $readId = $db->prepare('SELECT * FROM dessins WHERE id_dessins = :id');
@@ -36,28 +37,8 @@ function lireDessins(){
     $list = $readId->fetchall();
     return $list;
 }
-// read auteur
 
-function viewAuteur(){
-    $db = dbConnect();
-    $sql = 'SELECT * FROM auteurs';
-    $prepare = $db->prepare($sql);
-    $prepare->execute();
-    $list = $prepare->fetchall();
-    return $list;
-}
-function lireAuteur(){
-    $db = dbConnect();
-    $readId = $db->prepare('SELECT * FROM auteurs WHERE id_auteur = :id');
-    $readId->execute(
-    [
-        'id' => $_GET['id']
-    ]);
-    $list = $readId->fetchall();
-    return $list;
-}
-
-//create dessins
+// Create des dessins
 if (isset($_POST['submitDessins'])){
     $db = dbConnect();
     $sql ='INSERT INTO `dessins`(`dessin`, `description`, `image`) VALUES (:dessin,:description,:img)';
@@ -116,10 +97,9 @@ if (isset($_POST['submitDessins'])){
         echo " Erreur lors de l'envoi du fichier";
     }
     }
-};
+}
 
-
-// update dessins
+// Update des dessins
 function updateDessins(){
     $db = dbconnect();
     $sql = ('UPDATE dessins SET `dessin`=:dessin , `description`=:description , `image`=:image WHERE id_dessins= :id'); 
@@ -134,11 +114,31 @@ function updateDessins(){
     );
     $fileName = 'public/imgs/dessins/' . basename($_FILES['imgmodif']['name']);
     move_uploaded_file($_FILES['imgmodif']['tmp_name'], $fileName);
-    
 }
 
+// Get des auteurs
+function viewAuteur(){
+    $db = dbConnect();
+    $sql = 'SELECT * FROM auteurs';
+    $prepare = $db->prepare($sql);
+    $prepare->execute();
+    $list = $prepare->fetchall();
+    return $list;
+}
 
-// create auteurs
+// Read des auteurs
+function lireAuteur(){
+    $db = dbConnect();
+    $readId = $db->prepare('SELECT * FROM auteurs WHERE id_auteur = :id');
+    $readId->execute(
+    [
+        'id' => $_GET['id']
+    ]);
+    $list = $readId->fetchall();
+    return $list;
+}
+
+// Create des auteurs
 if (isset($_POST['submitAuteurs'])){
     $db = dbConnect();
     $sql ='INSERT INTO `auteurs`(`nom`, `style`, `photo`) VALUES (:nom,:style,:photo)';
@@ -197,4 +197,21 @@ if (isset($_POST['submitAuteurs'])){
         echo " Erreur lors de l'envoi du fichier";
     }
     }
-};
+}
+
+// Update des auteurs
+function updateAuteur(){
+    $db = dbconnect();
+    $sql = ('UPDATE auteurs SET `nom`=:nom , `style`=:style , `photo`=:photo WHERE id_auteur= :id'); 
+    $prepare = $db->prepare($sql);
+    $prepare->execute(
+        [
+            'nom' => $_POST['auteurmodif'],
+            'style' => $_POST['stylemodif'],
+            'photo' => 'public/imgs/auteurs/' . $_FILES['imgAuteurmodif']['name'],
+            'id' => $_POST['id']
+        ]
+    );
+    $fileName = 'public/imgs/auteurs/' . basename($_FILES['imgAuteurmodif']['name']);
+    move_uploaded_file($_FILES['imgAuteurmodif']['tmp_name'], $fileName);
+}
