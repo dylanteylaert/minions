@@ -167,7 +167,7 @@ if (isset($_POST['submitAuteurs'])){
 
 
     // Vérification de la taille du fichier
-    if ($_FILES["imgauteur"]["size"] > 500000) {
+    if ($_FILES["imgauteur"]["size"] > 5000000) {
     echo "La taille du fichier est trop importante.";
     $uploadOk = 0;
     }

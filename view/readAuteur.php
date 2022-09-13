@@ -7,15 +7,19 @@
         $list = lireAuteur();
         foreach ($list as $read){
         ?>
-        <div class="card">
-            <div class="card-body">
-                <img src="<?php echo $read['photo'] ;?>" alt="">
-                
-                <div class="ml-3">
-                    <p class="card-title">Titre : <?php echo $read['nom']; ?></p>
-                    <p class="card-text">Description : <?php echo $read['style']; ?></p>
+       
+        <div class="card mt-5 mb-3" style="max-width: 1000px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="<?php echo $read['photo'] ;?>" alt="" width="100%">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body" >
+                    <p class="card-title" >Titre : <?php echo $read['nom']; ?></p>
+                    <p class="card-text" >Description : <?php echo $read['style']; ?></p>
                     <a href="index.php?action=modifAuteurs&id=<?php echo $read['id_auteur'] ?>"><button class="btn btn-dark">Modifier</button></a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Supprimer</button>
+                </div>
                 </div>
             </div>
         </div>

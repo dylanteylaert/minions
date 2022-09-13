@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="./public/styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="bg-dark">
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,31 +21,40 @@
                     <a type="button" class="cou btn " href="index.php">Accueil</a>
                 </li>
                 <li class="nav-item active">
-                    <a type="button" class="cou btn " href="index.php?action=anim">Animé et dessin animé</a>
+                
+                    <a type="button" class="cou btn " href="index.php?action=anim"><button type="button" class="btn1">Animé et dessin animé</button></a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" class="cou btn" href="index.php?action=auteur">Auteur</a>
+                    <a type="button" class="cou btn" href="index.php?action=auteur"><button type="button" class="btn1">Auteur</button></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a type="button" class="cou btn " href="index.php?action=addanim">Ajouter un animé et dessin animé</a>
+                    <a type="button" class="cou btn " href="index.php?action=addanim"><button type="button" class="btn2">Ajouter un animé et dessin animé</button></a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" class="cou btn " href="index.php?action=addAuteurs">Ajouter un auteur</a>
+                    <a type="button" class="cou btn " href="index.php?action=addAuteurs"><button type="button" class="btn2">Ajouter un auteur</button></a>
                 </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" action="index.php?search">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
                 </form>
                 <a type="button" class="deco btn btn-dark btn-outline-light" name="search" href="index.php?action=addauteur">Déconnexion</a>
-                </form>search
+                </form>
             </div>
         </nav>
+     
     </header>
+    
+    <div class="mt-5 ">
+  <div class="container ">
+    <img src="public/imgs/header.jpg" width="100%" alt="">
+   
+  </div>
+</div>
 
 <?php echo $content ?>
 
 <!-- Footer -->
-<footer >
+<footer class="py-2 bg-dark fixed-bottom">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2022 Copyright: Les Minions
