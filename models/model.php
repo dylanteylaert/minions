@@ -66,13 +66,6 @@ if (isset($_POST['submitDessins'])){
         $uploadOk = 0;
     }
     }
-
-    // vérification si le fichier existe déjà
-    if (file_exists($target_file)) {
-    echo "Le fichier existe déjà.";
-    $uploadOk = 0;
-    }
-
     // Vérification de la taille du fichier
     if ($_FILES["img"]["size"] > 500000) {
     echo "La taille du fichier est trop importante.";
@@ -96,7 +89,9 @@ if (isset($_POST['submitDessins'])){
     } else {
         echo " Erreur lors de l'envoi du fichier";
     }
-    }
+    }echo    '  <div class="alert alert-success text-center" role="alert">
+    Les données ont bien été sauvegardées
+</div>'     ;
 }
 
 // Update des dessins
@@ -114,6 +109,9 @@ function updateDessins(){
     );
     $fileName = 'public/imgs/dessins/' . basename($_FILES['imgmodif']['name']);
     move_uploaded_file($_FILES['imgmodif']['tmp_name'], $fileName);
+    echo    '  <div class="alert alert-success text-center" role="alert">
+    Les données ont bien été modifier
+</div>'     ;
 }
 
 // Get des auteurs
@@ -150,7 +148,7 @@ if (isset($_POST['submitAuteurs'])){
         'photo' => 'public/imgs/auteurs/' . $_FILES["imgauteur"]["name"]
     ]
     );
-    $target_dir = "public/imgs/dessins/";//lieu où sont enregistré les image 
+    $target_dir = "public/imgs/auteurs/";//lieu où sont enregistré les image 
     $target_file = $target_dir . basename($_FILES["imgauteur"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -167,11 +165,6 @@ if (isset($_POST['submitAuteurs'])){
     }
     }
 
-    // vérification si le fichier existe déjà
-    if (file_exists($target_file)) {
-    echo "Le fichier existe déjà.";
-    $uploadOk = 0;
-    }
 
     // Vérification de la taille du fichier
     if ($_FILES["imgauteur"]["size"] > 500000) {
@@ -196,7 +189,9 @@ if (isset($_POST['submitAuteurs'])){
     } else {
         echo " Erreur lors de l'envoi du fichier";
     }
-    }
+    } echo    '  <div class="alert alert-success text-center" role="alert">
+    Les données ont bien été sauvegardées
+</div>'     ;
 }
 
 // Update des auteurs
@@ -214,4 +209,7 @@ function updateAuteur(){
     );
     $fileName = 'public/imgs/auteurs/' . basename($_FILES['imgAuteurmodif']['name']);
     move_uploaded_file($_FILES['imgAuteurmodif']['tmp_name'], $fileName);
+    echo    '  <div class="alert alert-success text-center" role="alert">
+    Les données ont bien été modifier
+</div>'     ;
 }
