@@ -7,15 +7,18 @@
         $list = lireDessins();
         foreach ($list as $read){
         ?>
-        <div class="card">
-            <div class="card-body">
-                <img src="<?php echo $read['image'] ;?>" alt="">
-                
-                <div class="ml-3">
-                    <p class="card-title">Titre : <?php echo $read['dessin']; ?></p>
-                    <p class="card-text">Description : <?php echo $read['description']; ?></p>
+        <div class="card mt-5 mb-3" style="max-width: 1000px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="<?php echo $read['image'] ;?>" alt="" width="100%">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body" >
+                    <p class="card-title" >Titre : <?php echo $read['dessin']; ?></p>
+                    <p class="card-text" >Description : <?php echo $read['description']; ?></p>
                     <a href="index.php?action=modifDessins&id=<?php echo $read['id_dessins'] ?>"><button class="btn btn-dark">Modifier</button></a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Supprimer</button>
+                </div>
                 </div>
             </div>
         </div>
@@ -47,6 +50,7 @@
         <?php
         }
         ?>
+    </div>
     </div>
 </section>
 <?php $content = ob_get_clean(); ?>
