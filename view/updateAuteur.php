@@ -16,7 +16,7 @@
             <input type="file" name="imgAuteurmodif" id="image" accept="image/png, image/jpeg">
         </div>
         <input type="submit" name="submitAuteursmodif" value="submit" class="btn btn-success">
-        <input type="text" name="id"  value="<?= $_GET['id']; ?>">
+        <input type="hidden" name="id"  value="<?= $_GET['id']; ?>">
     </form>
 </div>
 
