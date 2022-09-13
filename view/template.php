@@ -33,11 +33,11 @@
                     <a type="button" class="cou btn " href="index.php?action=addAuteurs">Ajouter un auteur</a>
                 </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" action="index.php?search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
                 </form>
-                <a type="button" class="deco btn btn-dark btn-outline-light" href="index.php?action=addauteur">Déconnexion</a>
-                </form>
+                <a type="button" class="deco btn btn-dark btn-outline-light" name="search" href="index.php?action=addauteur">Déconnexion</a>
+                </form>search
             </div>
         </nav>
     </header>
