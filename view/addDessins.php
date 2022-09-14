@@ -1,7 +1,7 @@
 <?php $title = 'Ajouter animé'; ?>
 <?php ob_start(); ?>
 
-<div class="container mb-5">
+<div class="container mb-5 " style=" width:25rem">
     <form action="index.php" method="POST" enctype="multipart/form-data">
         <div>
             <label>Dessin animé ou animé:</label>

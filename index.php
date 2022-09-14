@@ -1,4 +1,5 @@
 <?php
+  session_start();
 require 'controllers/controller.php';
 
 
@@ -143,3 +144,9 @@ $db = dbConnect();
     </div>
     <?php
 }?>
+
+<?php
+if(!isset($_SESSION["username"])){
+    header("Location: login.php");
+    exit(); 
+  }

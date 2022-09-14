@@ -8,10 +8,10 @@
         foreach ($list as $read){
         ?>
        
-        <div class="card mt-5 mb-3" style="max-width: 1000px;">
+        <div class="card card2 mt-5 mb-3" style="max-width: 1000px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="<?php echo $read['photo'] ;?>" alt="" width="100%">
+                    <img src="<?php echo $read['photo'] ;?>" class="imgfiche" alt="" width="100%">
                 </div>
                 <div class="col-md-8">
                 <div class="card-body" >

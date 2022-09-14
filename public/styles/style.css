@@ -38,5 +38,21 @@ footer {
     color: rgb(244, 117, 33);
     
 }
-
+.card2{
+    border-radius: 50px;
+}
+.card{  
+    border: solid black 3px;
+}
+.jumbo{
+    border-radius: 2%;
+    border: solid rgb(244, 117, 33) 3px;
+}
+.card-img-top{
+    border-radius: 10px ;
+}
+.imgfiche{
+    border-top-left-radius: 47px;
+    border-bottom-left-radius: 47px;
+}
 /* image */
