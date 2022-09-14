@@ -8,7 +8,7 @@
             foreach ($list as $read){
             ?>
 
-            <div class="card mt-5 ml-2" >
+            <div class="card mt-5 ml-2 "style=" width:25rem">
             <div class="card-body text-center d-flex flex-column">
                     <img src="<?php echo $read['photo'] ;?>" class="card-img-top" alt="" height="200px">
                     <div class="card-body">

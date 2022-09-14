@@ -37,7 +37,7 @@
                 <form class="form-inline my-2 my-lg-0" action="index.php?search">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
                 </form>
-                <a type="button" class="deco btn btn-dark btn-outline-light" name="search" href="index.php?action=addauteur">Déconnexion</a>
+                <a type="button" class="deco btn btn-dark btn-outline-light" href="./registration/login.php">Connexion</a>
                 </form>
             </div>
         </nav>
@@ -46,7 +46,7 @@
     
     <div class="mt-5 ">
   <div class="container ">
-    <img src="public/imgs/header.jpg" width="100%" alt="">
+    <img class="jumbo" src="public/imgs/header.jpg" width="100%" alt="">
    
   </div>
 </div>
@@ -54,7 +54,7 @@
 <?php echo $content ?>
 
 <!-- Footer -->
-<footer class="py-2 bg-dark fixed-bottom">
+<footer class="py-5 mt-5 bg-dark ">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2022 Copyright: Les Minions

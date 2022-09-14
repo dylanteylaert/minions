@@ -213,4 +213,3 @@ function updateAuteur(){
     Les données ont bien été modifier
 </div>'     ;
 }
-
